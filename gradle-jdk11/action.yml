@@ -1,6 +1,6 @@
-name: "md-snyk"
-description: "Check your Node application for vulnerabilties using Snyk"
-author: "Gareth Rushgrove"
+name: "md-snyk-gradle-jdk11"
+description: "Check your Gradle application running on JDK 11 for vulnerabilties using Snyk"
+author: "Michal Duda"
 branding:
   icon: "alert-triangle"
   color: "yellow"
@@ -12,7 +12,7 @@ inputs:
     description: "Additional arguments to pass to Snyk"
 runs:
   using: "docker"
-  image: "docker://snyk/snyk:node"
+  image: "docker://snyk/snyk:gradle-jdk11"
   args:
   - snyk
   - ${{ inputs.command }}
